@@ -3,7 +3,17 @@
             <title>E-Journal</title>
         </head>
         <body>
-            <p>Das Ist Fantastisch!</p>
-            <p>It works!</p>
+            <div>
+                <h1><a href="">E-Journal Systems</a></h1>
+            </div>
+            <div>
+		   {% for post in posts %}
+                      <div>
+                         <p>published: {{ post.published_date }}</p>
+                         <h1><a href="">{{post.title }}</a></h1>
+                         <p>{{ post.text|linebreaksbr }}<p/>
+                      </div>
+                   {% endfor %}
+            </div>
         </body>
     </html>
